@@ -6,7 +6,7 @@
  * Time: 23:51
  */
 
-    if(!defined('not_empty')){
+    if(!function_exists('not_empty')){
         function not_empty($fields = []){
             if(count($fields) != 0){
                 foreach ($fields as $field) {
