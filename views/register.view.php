@@ -4,11 +4,11 @@
 
 <div id="main-content">
     <div class="container">
-        <h1>Devenez dès présent membre:</h1>
+        <h1 class="lead">Devenez dès présent membre:</h1>
 
         <?php include('partials/_errors.php'); ?>
 
-        <form action="" method="post" class="well col-md-6" autocomplete="off">
+        <form action="" method="post" class="well col-md-6">
             <!-- Name field -->
             <div class="form-group">
                 <label class="control-label" for="name">Nom:</label>

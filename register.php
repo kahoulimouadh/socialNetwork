@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require('config/database.php');
 require('includes/functions.php');
 require('includes/constants.php');
@@ -47,7 +47,8 @@ require('includes/constants.php');
 
                 //informer l'utilisateur que le mail est envoyé
 
-                echo 'mail d\'activation envoyé';
+                set_flash("Mail d'activation envoyé",'success');
+                redirect('index.php');
             }
         }else{
             $errors[] = "Veuillez remplir tous les champs!";
