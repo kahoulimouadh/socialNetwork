@@ -12,17 +12,17 @@
             <!-- Name field -->
             <div class="form-group">
                 <label class="control-label" for="name">Nom:</label>
-                <input type="text" class="form-control" id="name" name="name" required="required">
+                <input type="text" value="<?= get_input('name') ?>" class="form-control" id="name" name="name" required="required">
             </div>
             <!-- Pseudo field -->
             <div class="form-group">
                 <label class="control-label" for="pseudo">Pseudo:</label>
-                <input type="text" class="form-control" id="pseudo" name="pseudo" required="required">
+                <input type="text" value="<?= get_input('pseudo') ?>" class="form-control" id="pseudo" name="pseudo" required="required">
             </div>
             <!-- Email field -->
             <div class="form-group">
                 <label class="control-label" for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" required="required">
+                <input type="email" value="<?= get_input('email') ?>" class="form-control" id="email" name="email" required="required">
             </div>
             <!-- Password field -->
             <div class="form-group">

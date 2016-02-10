@@ -49,10 +49,15 @@ require('includes/constants.php');
 
                 set_flash("Mail d'activation envoyé",'success');
                 redirect('index.php');
+            }else{
+                save_input_data();
             }
         }else{
             $errors[] = "Veuillez remplir tous les champs!";
+            save_input_data();
         }
+    }else{
+        clear_input_data();
     }
 ?>
 
