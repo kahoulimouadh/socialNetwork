@@ -34,6 +34,7 @@ require('includes/constants.php');
                 //envoyer mail d'activation
                 $to = $email;
                 $subject = WEBSITE_URL." - activation de compte";
+                $password = sha1($password);
                 $token = sha1($pseudo.$email.$password);
 
                 ob_start();
@@ -48,6 +49,14 @@ require('includes/constants.php');
                 //informer l'utilisateur que le mail est envoyé
 
                 set_flash("Mail d'activation envoyé",'success');
+                $q = $db->prepare('INSERT INTO users(name, pseudo, email, password)
+                    VALUES(:name, :pseudo, :email, :password)');
+                $q->execute([
+                    'name' => $name,
+                    'pseudo' => $pseudo,
+                    'email' => $email,
+                    'password' => $password
+                ]);
                 redirect('index.php');
             }else{
                 save_input_data();
