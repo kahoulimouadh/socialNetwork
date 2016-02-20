@@ -8,7 +8,7 @@
 
         <?php include('partials/_errors.php'); ?>
 
-        <form action="" method="post" class="well col-md-6">
+        <form data-parsley-validate action="" method="post" class="well col-md-6">
             <!-- Name field -->
             <div class="form-group">
                 <label class="control-label" for="name">Nom:</label>
@@ -17,12 +17,13 @@
             <!-- Pseudo field -->
             <div class="form-group">
                 <label class="control-label" for="pseudo">Pseudo:</label>
-                <input type="text" value="<?= get_input('pseudo') ?>" class="form-control" id="pseudo" name="pseudo" required="required">
+                <input data-parsley-minlength="3" type="text" value="<?= get_input('pseudo') ?>" class="form-control" id="pseudo" name="pseudo" required="required">
             </div>
             <!-- Email field -->
             <div class="form-group">
                 <label class="control-label" for="email">Email:</label>
-                <input type="email" value="<?= get_input('email') ?>" class="form-control" id="email" name="email" required="required">
+                <input type="email" value="<?= get_input('email') ?>" class="form-control" id="email" name="email"
+                       required="required" data-parsley-trigger="keypress">
             </div>
             <!-- Password field -->
             <div class="form-group">
@@ -32,7 +33,8 @@
             <!-- Password confirmation field -->
             <div class="form-group">
                 <label class="control-label" for="password_confirm">Confirmer mot de passe:</label>
-                <input type="password" class="form-control" id="password_confirm" name="password_confirm" required="required">
+                <input type="password" class="form-control" id="password_confirm" name="password_confirm"
+                       required="required" data-parsley-equalto="#password">
             </div>
             <input type="submit" class="btn btn-primary" value="Inscription" name="register">
         </form>
