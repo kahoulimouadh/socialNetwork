@@ -77,3 +77,20 @@
            }
         }
     }
+
+    /*
+     * gère l'état actif des liens de menu
+     */
+
+    if(!function_exists('set_active')){
+        function set_active($file, $class = 'active'){
+            $page_temp = explode('/', $_SERVER['SCRIPT_NAME']);
+            $page = array_pop($page_temp);
+
+            if($page == $file.'.php'){
+                return $class;
+            }else{
+                return "";
+            }
+        }
+    }
