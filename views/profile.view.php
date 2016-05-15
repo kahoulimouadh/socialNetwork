@@ -1,5 +1,5 @@
 
-<?php $title = "Profil"; ?>
+<?php $title = "Profil d'utilisateur"; ?>
 <?php include('partials/_header.php'); ?>
 
 <div id="main-content">

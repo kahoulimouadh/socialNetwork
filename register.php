@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+include('filter/guess_filter.php');
 require('config/database.php');
 require('includes/functions.php');
 require('includes/constants.php');

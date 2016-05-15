@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dev
- * Date: 21/02/2016
- * Time: 23:02
- */
+
+if(isset($_SESSION['user_id']) && isset($_SESSION['pseudo'])){
+  header('location: index.php');
+  exit();
+}
+
+?>
