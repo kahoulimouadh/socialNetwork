@@ -23,7 +23,7 @@ if(isset($_POST['login'])){
             redirect('profile.php');
         }else{
             set_flash('Combinaison id-password incorrecte!','danger');
-            save_input_data();
+            save_input_data(); //sauvegarder les infos au niveau de la session le champ login sera préremli s'il recharge la page
         }
     }
 }else{
