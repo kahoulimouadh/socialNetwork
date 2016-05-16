@@ -13,7 +13,7 @@ if(isset($_POST['login'])){
         extract($_POST);
         $q = $db->prepare("SELECT id, pseudo FROM users
                           WHERE (pseudo = :identifiant OR email = :identifiant)
-                          AND password = :password AND active = '1'");
+                          AND password = :password AND active = '0'");
         $q->execute([
             'identifiant' => $identifiant,
             'password' =>sha1($password)
