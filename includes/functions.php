@@ -13,6 +13,31 @@
             }
         }
     }
+    
+    if(!function_exists('find_user_by_id')){
+        function find_user_by_id($id){
+            global $db;
+            $q = $db->prepare('SELECT name, pseudo, email, city, country, twitter, github, sex, bio FROM users WHERE id = ?');
+            $q->execute([$id]);
+            $data = current($q->fetchAll(PDO::FETCH_OBJ));
+            $q->closeCursor();
+            return $data;
+        }
+    }
+    
+    if(!function_exists('get_avatar_url')){
+        function get_avatar_url($email){
+            return"http://gravatar.com/avatar/".md5(strtolower(trim(e($email))));
+        }
+    }
+    if(!function_exists('get_session')){
+        function get_session($key){
+            if($key){
+                return !empty($_SESSION[$key]) ? e($_SESSION[$key]) : null;
+            }
+        }
+    }
+    
     if(!function_exists('not_empty')){
         function not_empty($fields = []){
             if(count($fields) != 0){

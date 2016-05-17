@@ -25,7 +25,7 @@ if(isset($_POST['login'])){
             $user = $q->fetch(PDO::FETCH_OBJ);
             $_SESSION['user_id'] = $user->id;
             $_SESSION['pseudo'] = $user->pseudo;
-            redirect('profile.php');
+            redirect('profile.php?id='.$user->id);
         }else{
             set_flash('Combinaison id-password incorrecte!','danger');
             save_input_data(); //sauvegarder les infos au niveau de la session le champ login sera préremli s'il recharge la page
