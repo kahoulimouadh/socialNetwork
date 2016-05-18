@@ -44,13 +44,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
---
--- Contenu de la table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `pseudo`, `email`, `password`, `active`, `created_at`, `city`, `country`, `sex`, `twitter`, `github`, `available_for_hiring`, `bio`) VALUES
-(1, 'mmmm', 'mmmm', 'mmmm@gmail.com', '7c222fb2927d828af22f592134e8932480637c0d', '0', NULL, NULL, NULL, NULL, NULL, NULL, '0', NULL),
-(2, 'test', 'test', 'test@gmail.com', '51abb9636078defbf888d8457a7c76f85c8f114c', '0', NULL, NULL, NULL, NULL, NULL, NULL, '0', NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

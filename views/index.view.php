@@ -1,4 +1,3 @@
-
 <?php $title = "Accueil"; ?>
 <?php include('includes/constants.php'); ?>
 <?php include('partials/_header.php'); ?>

@@ -1,7 +1,6 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: dev
  * Date: 06/02/2016
  * Time: 23:51
  */
@@ -102,10 +101,6 @@
            }
         }
     }
-
-    /*
-     * gère l'état actif des liens de menu
-     */
 
     if(!function_exists('set_active')){
         function set_active($file, $class = 'active'){

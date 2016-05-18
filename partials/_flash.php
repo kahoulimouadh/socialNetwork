@@ -1,6 +1,3 @@
-
-
-
 <?php if(isset($_SESSION['notification']['message'])): ?>
     <div class="container">
         <div class="alert alert-<?= $_SESSION['notification']['type']?> ">

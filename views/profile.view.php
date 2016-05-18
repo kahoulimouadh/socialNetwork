@@ -1,4 +1,3 @@
-
 <?php $title = "Profil d'utilisateur"; ?>
 <?php include('partials/_header.php'); ?>
 

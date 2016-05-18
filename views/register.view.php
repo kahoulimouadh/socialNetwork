@@ -1,4 +1,3 @@
-
 <?php $title = "Inscription"; ?>
 <?php include('partials/_header.php'); ?>
 
