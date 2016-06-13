@@ -18,6 +18,7 @@ if(!empty($_GET['p']) && is_already_in_use('pseudo', $_GET['p'], 'users') && !em
     if($token == $token_verif){
         $q = $db->prepare("UPDATE users SET active = '1' WHERE pseudo = ?");
         $q->execute([$pseudo]);
+        set_flash('votre compte a été bel et bien activé!');
         redirect('login.php');
     }else{
         set_flash('Paramètres invalides', 'danger');
