@@ -9,8 +9,7 @@
             <div class="panel-heading">
               <h3 class="panel-title">Profil de <?= e($user->pseudo) ?></h3>
             </div>
-            <div class="panel-body">
-                
+            <div class="panel-body">       
                 <div class="row">
                     <div class="col-md-5">
                         <img src="<?= get_avatar_url($user->email) ?>" alt="image de profil de <?= e($user->pseudo) ?>" class="img-circle"/><br>
